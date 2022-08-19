@@ -6,10 +6,14 @@ def main():
     x = str(x)
     the_file(x)
 
-def the_file(x):
-    # view last entry
+def read_file():
     f = open("journal.txt", "r")
     print(f.read())
+
+
+def the_file(x):
+    # view last entry
+    read_file()
 
     # Ask for new entry today
     myText = str(input("What should I say today? "))
@@ -20,7 +24,6 @@ def the_file(x):
     f.close()
 
     # read entry just entered
-    f = open("journal.txt", "r")
-    print(f.read())
+    read_file()
 
 main()
